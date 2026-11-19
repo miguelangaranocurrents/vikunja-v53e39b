@@ -350,6 +350,10 @@ const projectId = toRef(props, 'projectId')
 const DRAG_OPTIONS = {
 	// sortable options
 	animation: 150,
+	// Distance in px from the scroll container's edge that starts auto-scrolling while
+	// dragging. Sortable's default (30px) is too thin to reliably catch a pointer
+	// hovering near the edge of the board.
+	scrollSensitivity: 80,
 	ghostClass: 'ghost',
 	dragClass: 'task-dragging',
 	delayOnTouchOnly: true,
